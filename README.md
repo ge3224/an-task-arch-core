@@ -22,7 +22,7 @@ Example inclusion in a playbook:
 
 ```yaml
 - name: Install Arch Linux core packages
-  include_tasks: modules/arch-packages/tasks/main.yml
+  include_tasks: tasks/task-pacman-core.yml
 ```
 
 ## Dependencies
