@@ -1,0 +1,53 @@
+--- 
+
+# Author: Jacob Benison
+# Author URI: https://github.com/ge3224
+# Date: 2025 March 15
+#
+# Install core pacman packages for Arch linux set ups.
+
+- name: Install basic utils, shells, apps
+  become: yes
+  community.general.pacman:
+    name:
+      - vlc
+      - brightnessctl
+      - ripgrep
+      - tree
+      - rsync
+      - bleachbit
+      - xorg-xrandr
+      - less
+      - termdown
+    state: present
+
+- name: Install archival utils
+  become: yes
+  community.general.pacman:
+    name: 
+      - atool
+      - p7zip
+      - unrar
+      - unzip
+      - xz
+      - zip
+      - bzip2
+      - gzip
+      - tar
+    state: present
+
+- name: Install download utils
+  become: yes
+  community.general.pacman:
+    name:
+      - curl
+      - wget
+      - aria2
+    state: present
+
+- name: Install xclip for Neovim to access clipboard
+  become: yes
+  community.general.pacman:
+    name:
+      - xclip
+    state: present
