@@ -23,14 +23,6 @@ Example inclusion in a playbook:
 ```yaml
 - name: Install Arch Linux core packages
   include_tasks: modules/arch-packages/tasks/main.yml
-  vars:
-    arch_core_packages: 
-      - base-devel
-      - git
-      - vim
-      - neovim
-      - htop
-    arch_install_aur_helper: true
 ```
 
 ## Dependencies
